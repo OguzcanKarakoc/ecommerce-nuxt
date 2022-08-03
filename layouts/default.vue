@@ -1,5 +1,9 @@
 <template>
   <div>
-    <slot />
+    <TheHeader />
+    <main>
+      <slot />
+    </main>
+    <TheFooter />
   </div>
 </template>
