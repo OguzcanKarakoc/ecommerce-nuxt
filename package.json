@@ -3,6 +3,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "server": "json-server --watch db.json --port 3004",
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
@@ -22,6 +23,7 @@
     "@heroicons/vue": "^1.0.6",
     "@pinia/nuxt": "^0.3.1",
     "daisyui": "^2.20.0",
+    "json-server": "^0.17.0",
     "theme-change": "^2.1.0"
   }
 }
