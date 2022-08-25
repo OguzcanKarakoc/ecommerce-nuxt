@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="385.22531"
+   height="339.61929"
+   viewBox="0 0 385.22531 339.6193"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (1:1.2.1+202207142221+cd75a1ee6d)"
+   sodipodi:docname="VShop short logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="0.5"
+     inkscape:cx="1003"
+     inkscape:cy="266"
+     inkscape:window-width="1920"
+     inkscape:window-height="903"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid459"
+       originx="1.4770047e-05"
+       originy="-20.377164" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-81.565872,-249.75535)">
+    <linearGradient
+       spreadMethod="pad"
+       y2="0.30000001"
+       x2="-0.1"
+       y1="1.2"
+       x1="0.30000001"
+       id="3d_gradient2-logo-a1bfbe27-4e62-4438-9247-3962aeb14515">
+      <stop
+         id="stop459830"
+         stop-opacity="1"
+         stop-color="#ffffff"
+         offset="0%" />
+      <stop
+         id="stop459832"
+         stop-opacity="1"
+         stop-color="#000000"
+         offset="100%" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="rotate(-30)"
+       spreadMethod="pad"
+       y2="0.30000001"
+       x2="-0.1"
+       y1="1.2"
+       x1="0.30000001"
+       id="3d_gradient3-logo-a1bfbe27-4e62-4438-9247-3962aeb14515">
+      <stop
+         id="stop459835"
+         stop-opacity="1"
+         stop-color="#ffffff"
+         offset="0%" />
+      <stop
+         id="stop459837"
+         stop-opacity="1"
+         stop-color="#cccccc"
+         offset="50%" />
+      <stop
+         id="stop459839"
+         stop-opacity="1"
+         stop-color="#000000"
+         offset="100%" />
+    </linearGradient>
+    <path
+       id="path459858"
+       style="font-style:normal;font-weight:800;font-size:72px;line-height:1;font-family:'Montserrat ExtraBold Alt1';font-variant-ligatures:none;text-align:center;text-anchor:middle;fill:#000000"
+       d="m 407.29569,-50.4 h -15.408 l 14.328,33.696 7.704,-17.64 z m 27.648,0 -13.968,32.832 -7.56,17.568 h 14.04 l 21.6,-50.4 z"
+       stroke-width="0"
+       stroke-linejoin="miter"
+       stroke-miterlimit="2"
+       fill="#f4e342"
+       stroke="#f4e342"
+       transform="matrix(6.738478,0,0,6.738478,-2559.1607,589.37464)" />
+  </g>
+</svg>

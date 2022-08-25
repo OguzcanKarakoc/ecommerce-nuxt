@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .menu > :where(li) > :where(ul) {
+    @apply pl-4;
+  }
+}
+
+@layer components {
+  .nav-open {
+    @apply bg-blue-500;
+  }
+
+  .nav-close {
+    @apply bg-red-500;
+  }
+  @media screen(lg) {
+    .nav-open {
+      @apply bg-green-500;
+    }
+
+    .nav-close {
+      @apply bg-pink-500 !important;
+    }
+  }
+}

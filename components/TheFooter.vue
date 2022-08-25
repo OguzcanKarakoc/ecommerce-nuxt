@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="relative sm:ml-20 md:ml-64">
     <footer class="footer bg-base-200 p-10 text-base-content">
       <div>
         <span class="footer-title">Services</span>

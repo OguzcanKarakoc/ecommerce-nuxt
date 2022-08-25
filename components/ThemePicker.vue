@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { ArrowDownIcon, ColorSwatchIcon } from '@heroicons/vue/solid'
+import { ArrowDownIcon, ColorSwatchIcon } from '@heroicons/vue/solid/index.js'
 
 export default {
   components: { ArrowDownIcon, ColorSwatchIcon },

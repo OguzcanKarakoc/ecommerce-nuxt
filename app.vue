@@ -1,15 +1,14 @@
 <template>
-  <NuxtLayout> <NuxtPage /> </NuxtLayout>
+  <NuxtLayout>
+    <NuxtLoadingIndicator />
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
-<script>
+<script setup>
 import { themeChange } from 'theme-change'
 
-export default {
-  setup() {
-    onMounted(() => {
-      themeChange(false)
-    })
-  },
-}
+onMounted(() => {
+  themeChange(false)
+})
 </script>
