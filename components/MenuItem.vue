@@ -1,12 +1,7 @@
 <template>
   <li class="hover-bordered">
     <nuxt-link v-if="to && !isDropdown" :to="to">
-      <component
-        v-if="icon"
-        :is="icon"
-        class="h-5 w-5 transition-all"
-        :class="{ 'lg:h-12 lg:w-12': !navStore.asideOpen }"
-      />
+      <component v-if="icon" :is="icon" class="h-5 w-5 transition-all" />
       <span
         :class="{
           'lg:hidden': !navStore.asideOpen,
@@ -15,13 +10,14 @@
       >
     </nuxt-link>
     <a class="hover-bordered" v-else @click.prevent="toggleDropdown">
-      <component
-        v-if="icon"
-        :is="icon"
-        class="h-5 w-5 transition-all"
-        :class="{ 'lg:h-12 lg:w-12': !navStore.asideOpen }"
-      />
-      <span class="flex-grow">{{ label }}</span>
+      <component v-if="icon" :is="icon" class="h-5 w-5 transition-all" />
+      <span
+        class="flex-grow"
+        :class="{
+          'lg:hidden': !navStore.asideOpen,
+        }"
+        >{{ label }}</span
+      >
       <template v-if="isDropdown">
         <ChevronDownIcon v-if="!open" class="h-5 w-5" />
         <ChevronUpIcon v-else class="h-5 w-5" />
@@ -42,7 +38,7 @@
 </template>
 
 <script setup>
-import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/vue/solid/index.js'
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/vue/24/solid/index.js'
 import { useNavStore } from '@/stores/index.js'
 
 const navStore = useNavStore()

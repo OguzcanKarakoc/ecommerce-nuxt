@@ -1,9 +1,9 @@
 <template>
-  <div class="dropdown dropdown-end">
+  <div class="dropdown-end dropdown">
     <label tabindex="0" class="btn m-1">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5 mr-1"
+        class="mr-1 h-5 w-5"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -19,10 +19,16 @@
     </label>
     <ul
       tabindex="0"
-      class="dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px max-h-96 h-[70vh] w-52 overflow-y-auto shadow-2xl mt-16"
+      class="dropdown-content rounded-t-box rounded-b-box top-px mt-16 h-[70vh] max-h-96 w-52 overflow-y-auto bg-base-200 text-base-content shadow-2xl"
     >
       <div class="grid grid-cols-1 gap-3 p-3">
-        <div class="btn" v-for="theme in themes" :key="theme" :data-set-theme="theme" :data-theme="theme">
+        <div
+          class="btn"
+          v-for="theme in themes"
+          :key="theme"
+          :data-set-theme="theme"
+          :data-theme="theme"
+        >
           {{ theme }}
         </div>
       </div>
@@ -31,7 +37,7 @@
 </template>
 
 <script>
-import { ArrowDownIcon, ColorSwatchIcon } from '@heroicons/vue/solid/index.js'
+import { ArrowDownIcon, ColorSwatchIcon } from '@heroicons/vue/24/solid/index.js'
 
 export default {
   components: { ArrowDownIcon, ColorSwatchIcon },

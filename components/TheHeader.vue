@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { MenuIcon, XIcon } from '@heroicons/vue/solid/index.js'
+import { Bars3Icon as MenuIcon, XMarkIcon as XIcon } from '@heroicons/vue/24/solid/index.js'
 import { useNavStore } from '@/stores/index.js'
 import MenuItem from '@/components/MenuItem.vue'
 
@@ -32,9 +32,8 @@ function handleAside(event) {
 }
 
 defineExpose({
-  MenuIcon,
-  XIcon,
   MenuItem,
   navStore,
+  handleAside,
 })
 </script>

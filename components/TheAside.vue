@@ -1,47 +1,73 @@
 <template>
   <aside
-    class="fixed top-0 z-10 h-screen whitespace-nowrap bg-neutral text-white shadow-[0_14px_28px_rgba(0,0,0,.25),0_10px_10px_rgba(0,0,0,.22)] transition-all sm:hover:w-64"
+    class="w-80 overflow-y-auto bg-base-200 text-base-content"
+    @mouseover="mouseOverAside"
+    @mouseleave="mouseLeaveAside"
     :class="{
-      'left-0 w-64 overflow-auto': props.navState == NavigationEnum.OPEN, // force open
-      'left-0 w-20 overflow-hidden': props.navState == NavigationEnum.SHRINK, // force shrink
-      '-left-full w-64 overflow-auto': props.navState == NavigationEnum.HIDDEN,
-      '-left-full w-64 overflow-auto lg:left-0': props.navState == NavigationEnum.DEFAULT,
+      'lg:w-20': !navStore.asideOpen,
     }"
   >
-    <div>
-      <div class="p-3" v-if="props.navState == NavigationEnum.OPEN">
-        <img src="/logo-short.svg" />
-      </div>
-      <div class="p-3" v-else><img src="/logo.svg" /></div>
-      <ul class="menu">
-        <MenuItem to="/" label="First Item" />
-        <MenuItem to="/" label="Second Item" />
+    <div class="px-3 pt-3">
+      <VShopLogo :short="!navStore.asideOpen" class="max-h-11" />
+    </div>
+    <div class="divider m-0 px-3"></div>
+    <ul
+      class="menu w-80 overflow-y-auto text-base-content"
+      :class="{
+        'rounded-box lg:p-2': navStore.asideOpen,
+      }"
+    >
+      <MenuItem to="/cart" :icon="DashboardIcon" label="Dashboard" />
+      <MenuItem :icon="CatalogIcon" label="Catalog">
+        <MenuItem to="/product/list" label="Products"></MenuItem>
+      </MenuItem>
+      <MenuItem to="/" :icon="SalesIcon" label="Sales">
         <MenuItem to="/" label="Test Item">
           <MenuItem to="/" label="Test Item">
-            <MenuItem to="/" label="Test Item">
-              <MenuItem to="/" label="Test Item"> </MenuItem>
-            </MenuItem>
+            <MenuItem to="/" label="Test Item"></MenuItem>
           </MenuItem>
         </MenuItem>
-      </ul>
-    </div>
+      </MenuItem>
+      <MenuItem to="/" :icon="CustomerIcon" label="Customers" />
+      <MenuItem to="/" :icon="PromotionsIcon" label="Promotions" />
+      <MenuItem to="/" :icon="ContentManagmentIcon" label="Content management" />
+      <MenuItem to="/" :icon="ConfigurationIcon" label="Configuration" />
+      <MenuItem to="/" :icon="SystemIcon" label="System" />
+      <MenuItem to="/" :icon="ReportsIcon" label="Reports" />
+      <MenuItem to="/" :icon="HelpIcon" label="Help" />
+    </ul>
   </aside>
 </template>
 
 <script setup>
-import { NavigationEnum } from '@/enums'
-import { CameraIcon } from '@heroicons/vue/solid/index.js'
+import MenuItem from '@/components/MenuItem.vue'
 import { useNavStore } from '@/stores/index.js'
+import {
+  DesktopComputerIcon as DashboardIcon,
+  BookmarkIcon as CatalogIcon,
+  ShoppingCartIcon as SalesIcon,
+  UserIcon as CustomerIcon,
+  TagIcon as PromotionsIcon,
+  PuzzleIcon as ContentManagmentIcon,
+  CogIcon as ConfigurationIcon,
+  CubeIcon as SystemIcon,
+  PresentationChartLineIcon as ReportsIcon,
+  QuestionMarkCircleIcon as HelpIcon,
+} from '@heroicons/vue/24/solid/index.js'
 
-const props = defineProps({
-  navState: {
-    type: String,
-    default: NavigationEnum.DEFAULT,
-    validator: (val) => Object.values(NavigationEnum).find((e) => e == val),
-  },
-})
+const navStore = useNavStore()
+
+function mouseOverAside() {
+  navStore.openAside()
+}
+
+function mouseLeaveAside() {
+  // if (navStore.asideOpen) navStore.closeAside()
+}
 
 defineExpose({
-  CameraIcon,
+  navStore,
+  mouseOverAside,
+  mouseLeaveAside,
 })
 </script>

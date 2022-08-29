@@ -9,6 +9,14 @@
 }
 
 @layer components {
+  .router-link-active {
+    @apply active;
+  }
+
+  .gradient-logo {
+    fill:
+  }
+
   .nav-open {
     @apply bg-blue-500;
   }
