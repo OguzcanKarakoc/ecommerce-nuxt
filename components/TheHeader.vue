@@ -16,6 +16,7 @@
       <MenuItem label="Test" />
       <MenuItem label="Test" />
       <MenuItem label="Test" />
+      <ThemePicker />
     </ul>
   </nav>
 </template>
